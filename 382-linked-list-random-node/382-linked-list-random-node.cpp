@@ -10,24 +10,19 @@
  */
 class Solution {
 public:
-    ListNode *headnode;
+    unordered_map<int,ListNode*>mp;
     Solution(ListNode* head) {
-        headnode=head;
+        ListNode *temp= head;
+        int i=0;
+        while(temp){
+            mp[i++]= temp;
+            temp=temp->next;
+        }
     }
     
     int getRandom() {
-        ListNode* temp = headnode;
-        int len=0;
-        while(temp){
-            len++;
-            temp=temp->next;
-        }
-        temp=headnode;
-        int randomIndex= rand()%len;
-        for(int i=0;i<randomIndex;i++){
-            temp=temp->next;
-        }
-        return temp->val;
+      int n= mp.size();
+      return mp[rand()%n]->val;
     }
 };
 
