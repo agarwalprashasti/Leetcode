@@ -6,15 +6,8 @@ public:
       if((m*n)!=(r*c)) return mat;
         
         vector<vector<int>>v(r, vector<int>(c,0));
-        int x=0,y=0;
-        for(int i=0;i<r;i++){
-            for(int j=0;j<c;j++){
-                v[i][j]= mat[x][y++];
-                if(y==n){
-                    y=y%n;
-                    ++x;
-                }
-            }
+        for(int i=0;i<(m*n);i++){
+          v[i/c][i%c]= mat[i/n][i%n];
         }
         return v;
     }
