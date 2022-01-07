@@ -1,1 +1,1 @@
-​
+https://leetcode.com/problems/linked-list-random-node/discuss/1672070/C%2B%2B-EASY-TO-SOLVE-oror-Beginner-friendly-with-few-imp-notes
